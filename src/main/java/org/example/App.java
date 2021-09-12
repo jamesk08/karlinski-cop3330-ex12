@@ -23,7 +23,7 @@ public class App
         System.out.print("Enter the number of years: ");
         double numberOfYears = scanner.nextDouble();
 
-        double returnOnInvestment = GetRoi(interestRateInput, numberOfYears, principalInput);
+        double returnOnInvestment = getRoi(interestRateInput, numberOfYears, principalInput);
 
         DecimalFormat moneyFormatter = new DecimalFormat("#,##0.00");
 
@@ -40,7 +40,7 @@ public class App
     /**
      * Calculates the total return on investment with given principal, interest rate and the total amount of years.
      */
-    private static double GetRoi(double interestRateInput, double numberOfYears, double principalInput)
+    private static double getRoi(double interestRateInput, double numberOfYears, double principalInput)
     {
         var returnOnInvestment = principalInput * ( 1 + (( interestRateInput / 100 ) * numberOfYears ));
         return returnOnInvestment;
